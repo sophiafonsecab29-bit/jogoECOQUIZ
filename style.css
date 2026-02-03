@@ -1,0 +1,221 @@
+:root {
+  --bg: #eef9ee;
+  --card: #fff;
+  --accent: #2e8b57;
+  --radius: 14px;
+}
+ 
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+  background: url("Arquivos/fundoum.png") no-repeat center center fixed;
+  background-size: cover;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;
+ 
+  padding: 20px;
+  min-height: 100vh;
+}
+ 
+.wrap {
+  width: 100%;
+  max-width: 900px;
+}
+ 
+/* card */
+.screen {
+  display: none;
+  background: none;        
+  padding: 80px 60px;              
+  box-shadow: none;      
+  border-radius: 0;      
+  margin-bottom: 0;      
+}
+ 
+.active {
+  display: block;
+}
+ 
+h1, h2 {
+  margin: 10px 0;
+}
+ 
+button {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  padding: 18px 26px; /* AUMENTEI */
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;    /* AUMENTEI */
+  margin: 10px auto;
+ 
+}
+ 
+button:hover {
+  opacity: 0.95;
+}
+ 
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: bold;
+ 
+}
+ 
+/* aparência do card de pergunta (interno ao quadrado) */
+.question {
+  padding: 40px;
+  border-radius: 12px;
+  background: #ffffff;
+  margin-top: 30px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+ 
+}
+ 
+#sprite {
+  font-size: 56px;
+  margin-bottom: 6px;
+}
+ 
+/* respostas */
+.answers {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+.answerBtn {
+  width: 90%;
+  max-width: 380px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #2f8f5b;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+.answerBtn:disabled {
+  opacity: 0.85;
+  cursor: default;
+}
+ 
+.correct {
+  background: #1fa34a !important;
+}
+ 
+.wrong {
+  background: #d34b4b !important;
+}
+ 
+#feedback {
+  font-weight: bold;
+  height: 20px;
+  margin-top: 10px;
+}
+ 
+/* reciclagem */
+.itemsArea, .bins {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+ 
+.trash-item {
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  box-shadow: 0 6px 14px rgba(10,30,10,0.06);
+  font-size: 36px;
+}
+ 
+.trash-item img {
+  max-width: 70%;
+}
+ 
+.bin-card {
+  width: 120px;
+  padding: 10px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  user-select: none;
+}
+ 
+.bin-label {
+  margin-top: 6px;
+  font-weight: bold;
+}
+ 
+/* RESPONSIVIDADE */
+@media (max-width:600px){
+  .answerBtn {
+    max-width: 320px;
+  }
+ 
+  .quiz-top {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+}
+ 
+#qtext {
+  font-size: 38px; /* aumentei a letra */
+  font-weight: bold;
+}
+ 
+h1 {
+  font-size: 78px;
+  font-weight: 900;
+    margin-bottom: 40px;
+    color: #fff;
+}
+ 
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#feedbackButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    background: #2e8b57;
+    color: black;
+}
+ 
+.finalButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* aqui sim o gap funciona */
+}
